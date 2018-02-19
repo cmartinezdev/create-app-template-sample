@@ -1,12 +1,11 @@
 import * as React from 'react';
 import { translate, TranslationFunction } from 'react-i18next';
+import { LoadingComponentProps } from 'react-loadable';
 
-interface Props {
+interface Props extends LoadingComponentProps {
   t: TranslationFunction;
-  error: Boolean;
-  pastDelay: Boolean;
-  timedOut: Boolean;
 }
+
 const Loading: React.SFC<Props> = ({ t, error, pastDelay, timedOut }) => {
   if (error) {
     return <div>Error!</div>;
