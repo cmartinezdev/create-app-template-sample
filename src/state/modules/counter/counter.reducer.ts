@@ -12,7 +12,6 @@ const reducer: Reducer<StateModel> = (
       ...state,
       count: state.count + action.payload.by,
       isIncrementing: false,
-      isError: false,
     };
   }
 
@@ -21,7 +20,6 @@ const reducer: Reducer<StateModel> = (
       ...state,
       count: state.count - action.payload.by,
       isIncrementing: false,
-      isError: false,
     };
   }
 
@@ -29,16 +27,14 @@ const reducer: Reducer<StateModel> = (
     return {
       ...state,
       isIncrementing: true,
-      isError: false,
     };
   }
 
   if (isType(action, actionCreators.incrementAsyncActionCreator.done)) {
     return {
       ...state,
-      count: state.count + action.payload.result.id,
+      count: state.count + action.payload.result.by,
       isIncrementing: false,
-      isError: false,
     };
   }
 
@@ -46,7 +42,6 @@ const reducer: Reducer<StateModel> = (
     return {
       ...state,
       isIncrementing: false,
-      isError: true,
     };
   }
 
@@ -54,16 +49,14 @@ const reducer: Reducer<StateModel> = (
     return {
       ...state,
       isDecrementing: true,
-      isError: false,
     };
   }
 
   if (isType(action, actionCreators.decrementAsyncActionCreator.done)) {
     return {
       ...state,
-      count: state.count - action.payload.result.id,
+      count: state.count - action.payload.result.by,
       isDecrementing: false,
-      isError: false,
     };
   }
 
@@ -71,7 +64,6 @@ const reducer: Reducer<StateModel> = (
     return {
       ...state,
       isIncrementing: false,
-      isError: true,
     };
   }
 

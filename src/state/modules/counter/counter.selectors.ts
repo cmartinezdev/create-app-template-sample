@@ -18,7 +18,3 @@ export const getIsIncrementing = (globalState: {}) => {
 export const getIsDecrementing = (globalState: {}) => {
   return getModuleState(globalState).isDecrementing;
 };
-
-export const getIsError = (globalState: {}) => {
-  return getModuleState(globalState).isError;
-};

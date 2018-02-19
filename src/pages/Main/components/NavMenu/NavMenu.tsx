@@ -16,9 +16,6 @@ const NavMenu: React.SFC<Props> = ({ t }) => (
     <NavLink className="margin" activeClassName="selected" to="/counter_async">
       {t('counterAsync')}
     </NavLink>
-    <NavLink className="margin" activeClassName="selected" to="/search">
-      {t('search')}
-    </NavLink>
   </div>
 );
 

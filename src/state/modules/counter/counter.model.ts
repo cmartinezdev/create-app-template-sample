@@ -7,7 +7,6 @@ export type StateModel = Readonly<{
   count: number;
   isIncrementing: boolean;
   isDecrementing: boolean;
-  isError: boolean;
 }>;
 
 /**
@@ -17,5 +16,4 @@ export const initialState: StateModel = {
   count: 0,
   isIncrementing: false,
   isDecrementing: false,
-  isError: false,
 };

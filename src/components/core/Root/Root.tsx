@@ -7,7 +7,7 @@ import 'src/services/i18next';
 import configureStore from 'src/state';
 import history from 'src/services/history';
 
-import App from 'src/components/App';
+import App from 'src/components/core/App';
 
 const store: Store<{}> = configureStore();
 

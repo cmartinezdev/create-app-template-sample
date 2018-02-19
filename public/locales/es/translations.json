@@ -3,8 +3,14 @@
   "getStarted": "Para empezar, edita <1>src/App.js</1> y guarda para recargar.",
   "counterSync": "Contador síncrono",
   "counterAsync": "Contador asíncrono",
-  "search": "Buscar",
   "value": "Valor",
   "increment": "Incrementar",
-  "decrement": "Decrementar"
+  "decrement": "Decrementar",
+  "login": "Identifícate",
+  "exit": "Salir",
+  "error": "Ha ocurrido un error",
+  "title_main": "Biko2App",
+  "title_login": "Biko2App - Identifícate",
+  "title_counter_sync": "Biko2App - Contador síncrono",
+  "title_counter_async": "Biko2App - Contador asíncrono"
 }

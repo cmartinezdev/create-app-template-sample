@@ -1,4 +1,8 @@
 {
-    // Set the default
+  // Set the default
   "editor.formatOnSave": true,
+
+  // Refactor plugin
+  "movets.relativeToTsconfig": true,
+  "movets.openEditors": false
 }

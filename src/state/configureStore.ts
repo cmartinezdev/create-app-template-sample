@@ -2,22 +2,23 @@ import { createStore, combineReducers, applyMiddleware, Store } from 'redux';
 import { routerReducer, routerMiddleware } from 'react-router-redux';
 import { composeWithDevTools } from 'redux-devtools-extension/logOnlyInProduction';
 import { LogEntryObject } from 'redux-logger';
+import createSagaMiddleware from 'redux-saga';
+import { reducer as reduxFormReducer } from 'redux-form';
 
-import { reducers } from './modules';
+import { reducers, rootSaga } from './modules';
 
 import history from 'src/services/history';
+
+const sagaMiddleware = createSagaMiddleware();
 
 const configureStore = (): Store<{}> => {
   const initialState: object = {};
   const enhancers: Function[] = [];
-  const middleware = [
-    /* sagaMiddleware, */
-    // Build the middleware for intercepting and dispatching navigation actions
-    routerMiddleware(history),
-  ];
+  const middleware = [sagaMiddleware, routerMiddleware(history)];
 
   // Log only in development
   if (process.env.NODE_ENV === 'development') {
+    // Lo importamos aquí para que no esté en el bundle de producción
     const { createLogger } = require('redux-logger');
     middleware.push(
       createLogger({
@@ -48,16 +49,17 @@ const configureStore = (): Store<{}> => {
     combineReducers({
       ...reducers,
       router: routerReducer,
+      form: reduxFormReducer,
     });
 
   const store = createStore(rootReducer(), initialState, composedEnhancers);
 
   // Run all sagas
-  /* let sagaTasks = sagaMiddleware.run(rootSaga); */
+  let sagaTasks = sagaMiddleware.run(rootSaga);
 
   if (process.env.NODE_ENV !== 'production') {
     if (module.hot) {
-      /* module.hot.accept('./modules', () => {
+      module.hot.accept('./modules', () => {
         // Replace reducer
         store.replaceReducer(rootReducer());
 
@@ -66,7 +68,7 @@ const configureStore = (): Store<{}> => {
         sagaTasks.done.then(() => {
           sagaTasks = sagaMiddleware.run(rootSaga);
         });
-      }); */
+      });
     }
   }
 

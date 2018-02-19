@@ -11,10 +11,7 @@ export interface IncrementAsyncPayloadStarted extends IncrementPayload {
 }
 
 export interface IncrementAsyncPayloadDone {
-  userId: number;
-  id: number;
-  title: string;
-  body: string;
+  by: number;
 }
 
 export interface DecrementAsyncPayloadStarted

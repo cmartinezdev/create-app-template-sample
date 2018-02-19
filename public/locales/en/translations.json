@@ -3,8 +3,14 @@
   "getStarted": "To get started, edit <1>src/App.js</1> and save to reload.",
   "counterSync": "Sync counter",
   "counterAsync": "Async counter",
-  "search": "Search",
   "value": "Value",
   "increment": "Increment",
-  "decrement": "Decrement"
+  "decrement": "Decrement",
+  "login": "Log in",
+  "exit": "Exit",
+  "error": "An error has occurred",
+  "title_main": "Biko2App",
+  "title_login": "Biko2App - Login",
+  "title_counter_sync": "Biko2App - Sync counter",
+  "title_counter_async": "Biko2App - Async counter"
 }
