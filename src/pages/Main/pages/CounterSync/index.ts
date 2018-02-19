@@ -6,7 +6,7 @@ import Loading from 'src/components/shared/Loading';
 
 export default Loadable({
   loader: () => import(/* webpackChunkName: "counter_sync" */ './CounterSync'),
-  loading: Loading, // Puede dar error si no está correctamente tipado
+  loading: Loading,
   delay: 200,
   timeout: 3000,
 });

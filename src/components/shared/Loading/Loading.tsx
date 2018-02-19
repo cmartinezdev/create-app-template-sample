@@ -2,6 +2,7 @@ import * as React from 'react';
 import { translate, TranslationFunction } from 'react-i18next';
 import { LoadingComponentProps } from 'react-loadable';
 
+// Da error si no está correctamente tipado
 interface Props extends LoadingComponentProps {
   t: TranslationFunction;
 }
