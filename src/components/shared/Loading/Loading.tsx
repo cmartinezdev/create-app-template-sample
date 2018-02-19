@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { translate, TranslationFunction, Trans } from 'react-i18next';
+import { translate, TranslationFunction } from 'react-i18next';
 
 interface Props {
   t: TranslationFunction;
