@@ -12,5 +12,6 @@
   "title_main": "Biko2App",
   "title_login": "Biko2App - Login",
   "title_counter_sync": "Biko2App - Sync counter",
-  "title_counter_async": "Biko2App - Async counter"
+  "title_counter_async": "Biko2App - Async counter",
+  "loading": "Loading"
 }

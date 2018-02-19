@@ -12,5 +12,6 @@
   "title_main": "Biko2App",
   "title_login": "Biko2App - Identifícate",
   "title_counter_sync": "Biko2App - Contador síncrono",
-  "title_counter_async": "Biko2App - Contador asíncrono"
+  "title_counter_async": "Biko2App - Contador asíncrono",
+  "loading": "Cargando"
 }
