@@ -5,14 +5,14 @@ import { Switch } from 'react-router';
 import { bindActionCreators, Dispatch, Action } from 'redux';
 import { connect } from 'react-redux';
 
-import * as actions from 'src/state/modules/auth/auth.actions';
+import * as actions from 'src/redux/modules/auth/auth.actions';
 
-import CounterSync from './pages/CounterSync';
-import CounterAsync from './pages/CounterAsync';
+import CounterSync from './CounterSync';
+import CounterAsync from './CounterAsync';
 
 import NavMenu from './components/NavMenu';
 
-import './Main.scss';
+import './Home.scss';
 
 interface Props {
   t: TranslationFunction;

@@ -3,8 +3,8 @@ import { translate, TranslationFunction } from 'react-i18next';
 import { bindActionCreators, Dispatch, Action } from 'redux';
 import { connect } from 'react-redux';
 
-import * as actions from 'src/state/modules/auth/auth.actions';
-import * as selectors from 'src/state/modules/auth/auth.selectors';
+import * as actions from 'src/redux/modules/auth/auth.actions';
+import * as selectors from 'src/redux/modules/auth/auth.selectors';
 import LoginForm, { LoginFormValues } from './components/LoginForm';
 
 interface Props {

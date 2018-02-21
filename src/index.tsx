@@ -3,7 +3,7 @@ import * as ReactDOM from 'react-dom';
 import registerServiceWorker from './registerServiceWorker';
 import './index.css';
 
-import Root from 'src/components/core/Root';
+import Root from './views/Root';
 
 const mountPoint = document.getElementById('root') as HTMLElement;
 

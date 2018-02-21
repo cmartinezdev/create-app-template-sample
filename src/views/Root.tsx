@@ -4,10 +4,10 @@ import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'react-router-redux';
 
 import 'src/services/i18next';
-import configureStore from 'src/state';
+import configureStore from 'src/redux';
 import history from 'src/services/history';
 
-import App from 'src/components/core/App';
+import App from './App';
 
 const store: Store<{}> = configureStore();
 

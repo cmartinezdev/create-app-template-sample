@@ -1,6 +1,6 @@
 import * as Loadable from 'react-loadable';
 
-import Loading from 'src/components/shared/Loading';
+import Loading from 'src/components/Loading';
 
 // export { default } from './CounterSync';
 

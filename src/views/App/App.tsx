@@ -2,13 +2,13 @@ import * as React from 'react';
 import { translate, TranslationFunction } from 'react-i18next';
 import { Switch } from 'react-router';
 
-import Main from 'src/pages/Main';
-import Login from 'src/pages/Login';
+import Home from '../Home';
+import Login from '../Login';
 
-import ChangeLang from './ChangeLang';
-import Header from 'src/components/core/App/Header';
-import RouteBasedHelmet from './RouteBasedHelmet';
-import AuthRoute, { showIfOptions } from './AuthRoute';
+import ChangeLang from './components/ChangeLang';
+import Header from './components/Header';
+import RouteBasedHelmet from './components/RouteBasedHelmet';
+import AuthRoute, { showIfOptions } from './components/AuthRoute';
 
 import './App.scss';
 
@@ -34,7 +34,7 @@ const App: React.SFC<Props> = ({ t }) => (
       />
       <AuthRoute
         path="/"
-        component={Main}
+        component={Home}
         showIf={showIfOptions.authenticated}
         redirectTo="/login"
       />

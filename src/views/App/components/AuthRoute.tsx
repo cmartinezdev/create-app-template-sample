@@ -3,7 +3,7 @@ import { Route, RouteProps } from 'react-router-dom';
 import { Redirect } from 'react-router';
 import { connect } from 'react-redux';
 
-import * as selectors from 'src/state/modules/auth/auth.selectors';
+import * as selectors from 'src/redux/modules/auth/auth.selectors';
 
 export enum showIfOptions {
   authenticated,

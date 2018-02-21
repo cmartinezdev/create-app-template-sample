@@ -3,8 +3,8 @@ import { translate, TranslationFunction } from 'react-i18next';
 import { bindActionCreators, Dispatch, Action } from 'redux';
 import { connect } from 'react-redux';
 
-import * as actions from 'src/state/modules/counter/counter.actions';
-import * as selectors from 'src/state/modules/counter/counter.selectors';
+import * as actions from 'src/redux/modules/counter/counter.actions';
+import * as selectors from 'src/redux/modules/counter/counter.selectors';
 
 interface Props {
   t: TranslationFunction;
