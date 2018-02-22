@@ -5,10 +5,16 @@ import { Switch } from 'react-router';
 import { bindActionCreators, Dispatch, Action } from 'redux';
 import { connect } from 'react-redux';
 
+import makeLoadable from 'src/utils/makeLoadable';
+
 import * as actions from 'src/redux/modules/auth/auth.actions';
 
-import CounterSync from './CounterSync';
-import CounterAsync from './CounterAsync';
+const CounterSync = makeLoadable(
+  import(/* webpackChunkName: "counter_sync" */ './CounterSync'),
+);
+const CounterAsync = makeLoadable(
+  import(/* webpackChunkName: "counter_async" */ './CounterAsync'),
+);
 
 import NavMenu from './components/NavMenu';
 
