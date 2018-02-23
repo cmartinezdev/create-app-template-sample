@@ -7,7 +7,7 @@ import { reducer as reduxFormReducer } from 'redux-form';
 
 import { reducers, rootSaga } from './modules';
 
-import history from 'src/services/history';
+import history from 'src/infrastructure/history';
 
 const sagaMiddleware = createSagaMiddleware();
 

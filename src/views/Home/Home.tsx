@@ -5,7 +5,7 @@ import { Switch } from 'react-router';
 import { bindActionCreators, Dispatch, Action } from 'redux';
 import { connect } from 'react-redux';
 
-import makeLoadable from 'src/utils/makeLoadable';
+import makeLoadable from 'src/infrastructure/makeLoadable';
 
 import * as actions from 'src/redux/modules/auth/auth.actions';
 
